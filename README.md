@@ -111,3 +111,29 @@ The logic is saved in `train_models.py` and requires standard Scikit-Learn depen
 pip install scikit-learn pandas numpy
 ```
 
+
+
+## 🔍 Week 3 Project: Unsupervised Clustering & Validation Pipeline
+
+This phase centers on the deployment, geometric validation, and classification mapping of unsupervised clustering algorithms using Scikit-Learn.
+
+### 📊 Objective & Architectural Layout
+Moving past supervised classification constraints, this workflow engineers an automated pipeline using the **K-Means Clustering** algorithm to isolate and group hidden multi-dimensional patterns within unlabeled numerical feature arrays. 
+
+To ensure optimal execution, the architecture implements the following steps:
+1. **Z-Score Normalization:** Standardizes multi-column distributions using the `StandardScaler` to prevent feature scales from distorting spatial distance measurements.
+2. **K-Means++ Optimization:** Deploys a seed-selection strategy to initialize cluster centroids efficiently, speeding up convergence and avoiding local minima traps.
+3. **Cluster Mapping:** Cross-references the discovered clusters against true distributions using a **Confusion Matrix** to derive classification performance indicators.
+
+### 📈 Core Validation & Evaluation Benchmarks
+The performance and structure of the generated clusters are verified using distinct analytical metrics:
+* **Silhouette Coefficient:** Measures spatial separation by checking individual point distances against their assigned cluster versus neighboring clusters (yields a solid validation score of **0.6841**).
+* **Precision & Recall Matrix:** Evaluates cluster mapping accuracy, achieving an average classification **F1-Score of 0.97** across all targeted clusters.
+
+### 📋 Script Configuration
+The full script logic is saved in `clustering_pipeline.py`. To run the script, make sure your python environment has the necessary dependencies installed:
+```bash
+pip install scikit-learn pandas numpy
+```
+
+
