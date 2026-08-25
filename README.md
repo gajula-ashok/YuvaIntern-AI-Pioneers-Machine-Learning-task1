@@ -88,3 +88,26 @@ print("\nPreprocessing pipeline completed successfully. Final matrix shape:", df
 ## 📋 Deliverables Included
 * `preprocess.py`: Fully operational and reproducible data engineering pipeline script.
 * `Week_1_Data_Preprocessing_Report.docx`: Formal corporate evaluation report containing step-by-step methodologies and design summaries.
+
+  ## 🤖 Week 2 Project: Supervised Machine Learning Evaluation
+
+This phase centers on the deployment, training optimization, and comparative metric benchmarking of supervised predictive algorithms using Scikit-Learn.
+
+### 📊 Objective & Model Implementations
+The workflow designs an automated binary classification pipeline using structured feature attributes. To highlight architectural performance differences, two models were evaluated:
+1. **Random Forest Classifier (Ensemble Method):** Utilizes a collection of independent decision trees to smooth structural variance and prevent overfitting.
+2. **K-Nearest Neighbors (Instance-Based Method):** Predicts class states based on geometric proximity and distance configurations across multi-dimensional feature domains.
+
+### 📈 Core Metrics & Evaluation Benchmarks
+Models are cross-compared using clear indicators derived from the testing matrix:
+* **Accuracy:** Overall correctness rates across positive and negative target distributions.
+* **Precision:** Minimization of false-positive allocations in sensitive classifications.
+* **Recall (Sensitivity):** Ability to correctly flag all true positive profiles.
+* **F1-Score:** The harmonic balance maintaining reliable thresholds when handling skewed data records.
+
+### 📋 Script Configuration
+The logic is saved in `train_models.py` and requires standard Scikit-Learn dependencies:
+```bash
+pip install scikit-learn pandas numpy
+```
+
