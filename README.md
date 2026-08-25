@@ -136,4 +136,34 @@ The full script logic is saved in `clustering_pipeline.py`. To run the script, m
 pip install scikit-learn pandas numpy
 ```
 
+## 🌐 Week 4 Project: AI Project Deployment & Capstone
+
+This final phase focuses on model serialization, pipeline architecture packaging, and web service deployment using Flask.
+
+### 📊 Objective & Operational Design
+The capstone converts the data pipeline into a live microservice API, allowing external clients to get predictions over standard web protocols.
+
+The system deployment features:
+1. **Model Serialization:** Uses `joblib` to save scaling parameters and model weights into portable binary artifacts.
+2. **Flask Micro-Framework Web Server:** Launches an active local server hosting a `/predict` endpoint to process network traffic.
+3. **JSON Communication:** Accepts input features via structured HTTP POST payloads and returns predictions alongside classification confidence scores.
+
+### 📋 Setup & Execution Guidelines
+To run the capstone service locally, install the required web and ML packages:
+```bash
+pip install flask joblib scikit-learn requests pandas numpy
+```
+
+1. Run the training script to export your model artifacts:
+   ```bash
+   python train_and_serialize.py
+   ```
+2. Launch your web server API application:
+   ```bash
+   python app.py
+   ```
+3. Open a separate terminal and test the endpoint using the client script:
+   ```bash
+   python test_api.py
+   ```
 
